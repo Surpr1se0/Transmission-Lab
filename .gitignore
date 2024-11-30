@@ -1,0 +1,3 @@
+# Ignorar ficheiros .torrent
+*.torrents
+torrents/

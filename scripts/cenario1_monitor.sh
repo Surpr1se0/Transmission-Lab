@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Diretórios
-TORRENT_DIR="./torrents"
-LOG_DIR="./logs"
+TORRENT_DIR="$(pwd)/torrents"
+LOG_DIR="$(pwd)/logs"
 
 # Certifica-te de que os diretórios existem
 mkdir -p "$TORRENT_DIR"
