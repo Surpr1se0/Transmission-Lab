@@ -4,8 +4,8 @@ import os
 import json
 
 # Caminho para o ficheiro CSV
-csv_file = "output/log_data_aggregated.csv"
-output_dir = "./figures"
+csv_file = "output/scene1/log_data_aggregated.csv"
+output_dir = "./figures/scene1"
 
 data = pd.read_csv(csv_file)
 

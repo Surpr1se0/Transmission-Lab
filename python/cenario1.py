@@ -50,7 +50,7 @@ def convert_to_seconds(data):
 data = convert_to_seconds(data)
 
 # Escreve os dados no CSV
-output_file = "./output/log_data.csv"
+output_file = "./output/scene1/log_data.csv"
 with open(output_file, "w", newline="") as csv_file:
     fieldnames = ["Tempo", "Progresso", "Peers Conectados", "Peers Totais", "Download", "Upload"]
     writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
