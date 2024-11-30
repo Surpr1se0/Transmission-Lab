@@ -9,20 +9,30 @@ output_file = "./output/log_data_aggregated.csv"
 # Lê os dados do CSV
 data = pd.read_csv(input_file)
 
-# Agrupa os dados por `Timestamp` e calcula médias para colunas numéricas
+# Função para converter velocidades de kB/s para MB/s
+def convert_to_mbs(speed):
+    if "kB/s" in speed:
+        return float(speed.replace("kB/s", "").strip()) / 1000  # kB/s para MB/s
+    elif "MB/s" in speed:
+        return float(speed.replace("MB/s", "").strip())  # Mantém MB/s inalterado
+    return 0
+
+# Aplica a conversão na coluna `Download` antes de agregar
+data["Download"] = data["Download"].apply(convert_to_mbs)
+
+# Agrupa os dados por `Tempo` e calcula médias ou valores relevantes para cada coluna
 aggregated_data = (
     data.groupby("Tempo", as_index=False)
     .agg({
-        "Progresso": lambda x:x.iloc[0],  
-        "Peers Conectados": lambda x:x.iloc[0],  
-        "Peers Totais": "mean",  
-        "Download": lambda x: x.max(),
-        "Upload": lambda x: x.max(), 
+        "Progresso": lambda x: x.iloc[0],  # Mantém o primeiro valor para `Progresso`
+        "Peers Conectados": lambda x: x.iloc[0],  # Mantém o primeiro valor para `Peers Conectados`
+        "Peers Totais": "mean",  # Calcula a média de `Peers Totais`
+        "Download": "max",  # Usa o valor máximo de `Download` (em MB/s)
+        "Upload": lambda x: x.max(),  # Usa o valor máximo de `Upload`
     })
 )
 
-# Converte as colunas `Download` e `Upload` para strings (caso necessário)
-aggregated_data["Download"] = aggregated_data["Download"].astype(str)
+# Converte a coluna `Upload` para string (caso necessário)
 aggregated_data["Upload"] = aggregated_data["Upload"].astype(str)
 
 # Salva o CSV com os dados agregados
