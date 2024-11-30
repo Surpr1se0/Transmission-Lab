@@ -11,7 +11,7 @@ mkdir -p "$LOG_DIR"
 # Caminho para o ficheiro .torrent
 TORRENT_FILE="$TORRENT_DIR/ubuntu.torrent"
 
-# Nome do ficheiro de log RAW
+# Nome do ficheiro de log RAW com timestamps
 LOG_FILE_RAW="$LOG_DIR/cenario1_raw.log"
 
 # Verifica se o ficheiro .torrent existe
@@ -20,27 +20,25 @@ if [ ! -f "$TORRENT_FILE" ]; then
     exit 1
 fi
 
-# Regista a hora de início
-START_TIME=$(date +%s)
+# Regista a hora de início e outras mensagens de debug
+echo "[DEBUG] Script iniciado às $(date '+%Y-%m-%d %H:%M:%S')"
+echo "[DEBUG] Logs serão armazenados em $LOG_FILE_RAW"
+echo "[DEBUG] Caminho do ficheiro .torrent: $TORRENT_FILE"
 
-# Inicia o download e guarda os logs no ficheiro RAW
-echo "Iniciando o download do torrent..."
-transmission-cli "$TORRENT_FILE" | tee "$LOG_FILE_RAW" | while read -r line; do
+# Inicia o download e captura a saída, transformando as atualizações em linhas separadas
+echo "[DEBUG] Iniciando o download do torrent..."
+transmission-cli "$TORRENT_FILE" 2>&1 | stdbuf -oL tr '\r' '\n' | while IFS= read -r line; do
+    # Adiciona um timestamp antes de cada linha
+    TIMESTAMPED_LINE="$(date '+%Y-%m-%d %H:%M:%S') $line"
+    echo "$TIMESTAMPED_LINE" >> "$LOG_FILE_RAW"
+    # echo "[DEBUG] Capturado: $TIMESTAMPED_LINE"
+
     # Verifica se o download foi concluído
     if echo "$line" | grep -q "Progress: 100.0%"; then
-        echo "Download completo! A encerrar o Transmission CLI..."
+        #echo "[DEBUG] Detetado progresso de 100%."
+        #echo "Download completo! A encerrar o Transmission CLI..."
         pkill transmission-cli
         break
     fi
 done
-
-# Regista a hora de término
-END_TIME=$(date +%s)
-
-# Calcula o tempo total de download
-TOTAL_TIME=$((END_TIME - START_TIME))
-
-# Exibe e regista as métricas finais
-echo "Tempo total de download: $TOTAL_TIME segundos"
-echo "Logs RAW disponíveis em: $LOG_FILE_RAW"
 
