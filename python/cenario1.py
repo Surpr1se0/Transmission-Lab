@@ -3,7 +3,10 @@ import csv
 from datetime import datetime
 
 # Caminho para o log
-log_file_path = "./logs/cenario1_raw.log"
+log_file_path = "./logs/cenario1/cenario1_1raw.log"
+
+# Escreve os dados no CSV
+output_file = "./output/scene1/log_data_1.csv"
 
 # Padrão de regex para extrair a informação
 log_pattern = re.compile(
@@ -49,8 +52,7 @@ def convert_to_seconds(data):
 # Adiciona a coluna `Tempo (s)` e remove o `Timestamp`
 data = convert_to_seconds(data)
 
-# Escreve os dados no CSV
-output_file = "./output/scene1/log_data.csv"
+
 with open(output_file, "w", newline="") as csv_file:
     fieldnames = ["Tempo", "Progresso", "Peers Conectados", "Peers Totais", "Download", "Upload"]
     writer = csv.DictWriter(csv_file, fieldnames=fieldnames)

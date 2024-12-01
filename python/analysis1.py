@@ -7,6 +7,9 @@ import json
 csv_file = "output/scene1/log_data_aggregated.csv"
 output_dir = "./figures/scene1"
 
+# Caminho para o ficheiro JSON
+json_file = "./logs/stats1.json"
+
 data = pd.read_csv(csv_file)
 
 tempo_total = data["Tempo"].max()
@@ -63,8 +66,6 @@ plt.show()
 #################### 3. Volume total de dados  ###################################
 ##################################################################################
 
-# Caminho para o ficheiro JSON
-json_file = "./logs/stats1.json"
 
 # Carregar os dados do JSON
 with open(json_file, "r") as file:

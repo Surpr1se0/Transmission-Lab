@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Diretórios
-TORRENT_DIR="$(pwd)/torrents"
-LOG_DIR="$(pwd)/logs"
+TORRENT_DIR="$(dirname $(dirname $(pwd)))/torrents"
+LOG_DIR="$(dirname $(dirname $(pwd)))/logs/cenario1"
 
 # Certifica-te de que os diretórios existem
 mkdir -p "$TORRENT_DIR"
@@ -12,7 +12,7 @@ mkdir -p "$LOG_DIR"
 TORRENT_FILE="$TORRENT_DIR/kali.torrent"
 
 # Nome do ficheiro de log RAW com timestamps
-LOG_FILE_RAW="$LOG_DIR/cenario2.log"
+LOG_FILE_RAW="$LOG_DIR/cenario1/cenario2_1raw.log"
 
 # Verifica se o ficheiro .torrent existe
 if [ ! -f "$TORRENT_FILE" ]; then
