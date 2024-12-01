@@ -2,7 +2,7 @@
 
 # Diretórios
 TORRENT_DIR="$(dirname $(dirname $(pwd)))/torrents"
-LOG_DIR="$(dirname $(dirname $(pwd)))/logs"
+LOG_DIR="$(dirname $(pwd))/logs/cenario2"
 
 # Certifica-te de que os diretórios existem
 mkdir -p "$TORRENT_DIR"
@@ -12,7 +12,7 @@ mkdir -p "$LOG_DIR"
 TORRENT_FILE="$TORRENT_DIR/ubuntu.torrent"
 
 # Nome do ficheiro de log RAW com timestamps
-LOG_FILE_RAW="$LOG_DIR/cenario1_raw.log"
+LOG_FILE_RAW="$LOG_DIR/cenario1_1raw.log"
 
 # Verifica se o ficheiro .torrent existe
 if [ ! -f "$TORRENT_FILE" ]; then
