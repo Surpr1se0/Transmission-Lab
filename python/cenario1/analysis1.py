@@ -4,11 +4,16 @@ import os
 import json
 
 # Caminho para o ficheiro CSV
-csv_file = "output/scene1/log_data_aggregated1_2.csv"
+csv_file = "output/scene1/log_data_aggregated1_3.csv"
 output_dir = "./figures/scene1"
 
 # Caminho para o ficheiro JSON
-json_file = "./logs/cenario1/stats1_2.json"
+json_file = "./logs/cenario1/stats1_3.json"
+
+graph_name_1 = "grafico_progresso3.png"
+graph_name_2 = "grafico_velocidade_download3.png"
+graph_name_3 = "grafico_bytes3.png"
+
 
 data = pd.read_csv(csv_file)
 
@@ -33,7 +38,7 @@ plt.legend()
 plt.grid(True)
 
 # Salva o gráfico no diretório especificado
-output_path = os.path.join(output_dir, "grafico_progresso2.png")
+output_path = os.path.join(output_dir, graph_name_1)
 plt.savefig(output_path)
 plt.show()
 
@@ -57,7 +62,7 @@ plt.legend()
 plt.grid(True)  
 
 # Salva o gráfico
-output_path = os.path.join(output_dir, "grafico_velocidade_download2.png")
+output_path = os.path.join(output_dir, graph_name_2)
 plt.savefig(output_path)
 plt.show()
 
@@ -79,6 +84,7 @@ total = downloaded + uploaded  # Soma total em MB
 # Preparar dados para o gráfico
 labels = ["Downloaded", "Uploaded", "Total"]
 values = [downloaded, uploaded, total]
+print(values)
 
 plt.figure(figsize=(8, 6))
 plt.bar(labels, values, color=["blue", "green", "orange"])
@@ -88,6 +94,6 @@ plt.xlabel("Categoria")
 plt.grid(axis="y", linestyle="--", alpha=0.7)
 
 # Salvar o gráfico
-output_path = os.path.join(output_dir, "grafico_bytes2.png")
+output_path = os.path.join(output_dir, graph_name_3)
 plt.savefig(output_path)
 plt.show()
