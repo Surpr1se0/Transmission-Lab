@@ -4,16 +4,19 @@ import os
 import json
 
 # Caminho para o ficheiro CSV
-csv_file = "output/scene1/log_data_aggregated1_3.csv"
+csv_file = "output/scene1/log_data_aggregated1_1.csv"
 output_dir = "./figures/scene1"
 
 # Caminho para o ficheiro JSON
-json_file = "./logs/cenario1/stats1_3.json"
+json_file = "./logs/cenario1/stats1_1.json"
 
-graph_name_1 = "grafico_progresso3.png"
-graph_name_2 = "grafico_velocidade_download3.png"
-graph_name_3 = "grafico_bytes3.png"
+# Nomes para os gráficos individuais
+graph_name_1 = "grafico_progresso1.png"
+graph_name_2 = "grafico_velocidade_download1.png"
+graph_name_3 = "grafico_bytes1.png"
 
+# Nome para o gráfico agregado
+graph_name_4 = "grafico_aggregated.png"
 
 data = pd.read_csv(csv_file)
 
@@ -53,6 +56,7 @@ data = data.sort_values(by="Tempo").reset_index(drop=True)
 # Gráfico de Velocidade de Download ao Longo do Tempo
 plt.figure(figsize=(12, 6))
 plt.plot(data["Tempo"], data["Download"], color="blue", linewidth=2, label="Velocidade")
+plt.plot(data["Tempo"], data["Peers Conectados"], color="orange", linewidth=2, label="Peers Conectados")
 
 # Configurações do gráfico
 plt.xlabel("Tempo (s)")
@@ -97,3 +101,53 @@ plt.grid(axis="y", linestyle="--", alpha=0.7)
 output_path = os.path.join(output_dir, graph_name_3)
 plt.savefig(output_path)
 plt.show()
+
+
+
+##################################################################################
+############# 4. Gráfico da Velocidade do Download ao Longo do Tempo ##############
+##################################################################################
+
+file_1= "output/scene1/log_data_aggregated1_1.csv"
+file_2= "output/scene1/log_data_aggregated1_2.csv"
+file_3= "output/scene1/log_data_aggregated1_3.csv"
+
+data_1 = pd.read_csv(file_1)
+data_2 = pd.read_csv(file_2)
+data_3 = pd.read_csv(file_3)
+
+# Ordena os dados pelo tempo
+data_1 = data_1.sort_values(by="Tempo").reset_index(drop=True)
+data_2 = data_2.sort_values(by="Tempo").reset_index(drop=True)
+data_3 = data_3.sort_values(by="Tempo").reset_index(drop=True)
+
+# Calculo da média do tempo e download para os 3
+mean_time_1 = data_1["Tempo"].mean()
+mean_time_2 = data_2["Tempo"].mean()
+mean_time_3 = data_3["Tempo"].mean()
+
+mean_dl_1 = data_1["Download"].mean()
+mean_dl_2 = data_2["Download"].mean()
+mean_dl_3 = data_3["Download"].mean()
+
+print(mean_time_1, mean_time_2, mean_time_3)
+print(mean_dl_1, mean_dl_2, mean_dl_3)
+
+# Gráfico de Velocidade de Download ao Longo do Tempo
+plt.figure(figsize=(12, 6))
+plt.plot(data_1["Tempo"], data_1["Download"], color="blue", linewidth=2, label="1a Iteração")
+plt.plot(data_2["Tempo"], data_2["Download"], color="red", linewidth=2, label="2a Iteração")
+plt.plot(data_3["Tempo"], data_3["Download"], color="green", linewidth=2, label="3a Iteração")
+
+# Configurações do gráfico
+plt.xlabel("Tempo (s)")
+plt.ylabel("Velocidade do Download (Mbps)")
+plt.title("Evolução da Velocidade de Download ao Longo do Tempo (Ordenado por Tempo) das 3 simulações")
+plt.legend()
+plt.grid(True)  
+
+# Salva o gráfico
+output_path = os.path.join(output_dir, graph_name_4)
+plt.savefig(output_path)
+plt.show()
+
