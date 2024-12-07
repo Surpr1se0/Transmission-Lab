@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Diretórios
-TORRENT_DIR="$(dirname $(dirname $(pwd)))/torrents"
+TORRENT_DIR="$(dirname $(dirname $(pwd)))/Transmission-Lab/torrents"
 LOG_DIR="$(dirname $(pwd))/logs/cenario3"
 
 # Certifica-te de que os diretórios existem
@@ -12,7 +12,14 @@ mkdir -p "$LOG_DIR"
 TORRENT_FILE="$TORRENT_DIR/ubuntu.torrent"
 
 # Nome do ficheiro de log RAW com timestamps
-LOG_FILE_RAW="$LOG_DIR/cenario3_1raw.log"
+LOG_FILE_RAW="$LOG_DIR/cenario1_1raw.log"
+
+# Configura condições de rede
+echo "[DEBUG] Configurando condições de rede: Largura de banda limitada a 5 Mbps, latência 50ms e perda de pacotes 10%"
+sudo tc qdisc add dev ens33 root handle 1: htb default 12
+sudo tc qdisc add dev ens33 parent 1:12 handle 10: netem delay 50ms loss 10%
+sudo wondershaper -a ens33 -d 40000 -u 40000
+
 
 # Verifica se o ficheiro .torrent existe
 if [ ! -f "$TORRENT_FILE" ]; then

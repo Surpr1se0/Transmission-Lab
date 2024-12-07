@@ -1,0 +1,145 @@
+2024-12-07 11:00:27 [2024-12-07 11:00:27.709] Transmission 3.00 (bb6b5a062e) started
+2024-12-07 11:00:27 [2024-12-07 11:00:27.710] RPC Server: Adding address to whitelist: 127.0.0.1
+2024-12-07 11:00:27 [2024-12-07 11:00:27.710] RPC Server: Adding address to whitelist: ::1
+2024-12-07 11:00:27 [2024-12-07 11:00:27.710] RPC Server: Serving RPC and Web requests on 0.0.0.0:9091/transmission/
+2024-12-07 11:00:27 [2024-12-07 11:00:27.710] RPC Server: Whitelist enabled
+2024-12-07 11:00:27 [2024-12-07 11:00:27.710] RPC Server: Password required
+2024-12-07 11:00:27 [2024-12-07 11:00:27.710] UDP: Failed to set receive buffer: requested 4194304, got 425984
+2024-12-07 11:00:27 [2024-12-07 11:00:27.710] UDP: Please add the line "net.core.rmem_max = 4194304" to /etc/sysctl.conf
+2024-12-07 11:00:27 [2024-12-07 11:00:27.710] UDP: Failed to set send buffer: requested 1048576, got 425984
+2024-12-07 11:00:27 [2024-12-07 11:00:27.710] UDP: Please add the line "net.core.wmem_max = 1048576" to /etc/sysctl.conf
+2024-12-07 11:00:27 [2024-12-07 11:00:27.710] DHT: Reusing old id
+2024-12-07 11:00:27 [2024-12-07 11:00:27.710] DHT: Bootstrapping from 105 IPv4 nodes
+2024-12-07 11:00:27 [2024-12-07 11:00:27.761] Saved "/home/surprise/.config/transmission/torrents/41e6cd50ccec55cd5704c5e3d176e7b59317a3fb.torrent"
+2024-12-07 11:00:27 [2024-12-07 11:00:27.761] ubuntu-24.04.1-live-server-amd64.iso: Pausing
+2024-12-07 11:00:27 [2024-12-07 11:00:27.761] Saved "/home/surprise/.config/transmission/resume/41e6cd50ccec55cd5704c5e3d176e7b59317a3fb.resume"
+2024-12-07 11:00:27 [2024-12-07 11:00:27.761] ubuntu-24.04.1-live-server-amd64.iso: Queued for verification
+2024-12-07 11:00:27 [2024-12-07 11:00:27.761] ubuntu-24.04.1-live-server-amd64.iso: Verifying torrent
+2024-12-07 11:00:28 [2024-12-07 11:00:28.042] Port Forwarding (NAT-PMP): initnatpmp succeeded (0)
+2024-12-07 11:00:28 [2024-12-07 11:00:28.042] Port Forwarding (NAT-PMP): sendpublicaddressrequest succeeded (2)
+2024-12-07 11:00:30 [2024-12-07 11:00:30.313] Port Forwarding (UPnP): Found Internet Gateway Device "http://192.168.1.254:5431/uuid:9238f78f-c8cd-47b8-974b-e8112eb71e40/WANIPConnection:1"
+2024-12-07 11:00:30 [2024-12-07 11:00:30.314] Port Forwarding (UPnP): Local Address is "192.168.28.176"
+2024-12-07 11:00:30 [2024-12-07 11:00:30.866] Port Forwarding (UPnP): Port forwarding through "http://192.168.1.254:5431/uuid:9238f78f-c8cd-47b8-974b-e8112eb71e40/WANIPConnection:1", service "urn:schemas-upnp-org:service:WANIPConnection:1". (local address: 192.168.28.176:51413)
+2024-12-07 11:00:30 [2024-12-07 11:00:30.866] Port Forwarding (UPnP): Port forwarding successful!
+2024-12-07 11:00:30 [2024-12-07 11:00:30.866] Port Forwarding: State changed from "Not forwarded" to "Forwarded"
+2024-12-07 11:00:30 [2024-12-07 11:00:30.868] web: will verify tracker certs using envvar CURL_CA_BUNDLE: none
+2024-12-07 11:00:30 [2024-12-07 11:00:30.868] web: NB: this only works if you built against libcurl with openssl or gnutls, NOT nss
+2024-12-07 11:00:30 [2024-12-07 11:00:30.868] web: NB: invalid certs will show up as 'Could not connect to tracker' like many other errors
+2024-12-07 11:00:37 transmission-cli 3.00 (bb6b5a062e)
+2024-12-07 11:00:37 
+2024-12-07 11:00:38 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:38 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:38 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:38 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:38 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:38 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:38 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:38 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:38 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:38 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:38 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:38 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:38 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:38 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:38 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:38 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:38 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:38 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:38 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:38 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:38 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:38 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:38 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:38 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:38 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:38 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:38 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:38 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:38 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:38 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:38 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:38 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:38 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:38 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:38 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:38 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:38 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:38 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:38 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:38 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:38 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:38 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:38 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:38 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:38 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:38 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:38 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:38 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:38 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:38 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:41 Progress: [2024-12-07 11:00:41.002] ubuntu-24.04.1-live-server-amd64.iso: Starting IPv4 DHT announce (poor, 14 nodes)
+2024-12-07 11:00:47 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:48 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:48 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:48 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:48 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:48 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:48 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:48 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:48 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:48 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:48 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:48 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:48 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:48 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:48 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:48 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:48 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:48 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:48 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:48 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:48 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:48 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:48 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:48 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:48 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:48 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:48 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:48 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:48 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:48 Progress: 0.0%, dl from 0 of 1 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:48 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:48 Progress: 0.0%, dl from 0 of 0 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:48 Progress: 0.0%, dl from 0 of 2 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:48 Progress: 0.0%, dl from 0 of 3 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:48 Progress: 0.0%, dl from 0 of 4 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:48 Progress: 0.0%, dl from 0 of 4 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:48 Progress: 0.0%, dl from 0 of 5 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:48 Progress: 0.0%, dl from 0 of 4 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:48 Progress: 0.0%, dl from 0 of 4 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:48 Progress: 0.0%, dl from 0 of 7 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:48 Progress: 0.0%, dl from 0 of 7 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:48 Progress: 0.0%, dl from 0 of 7 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:48 Progress: 0.0%, dl from 0 of 7 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:48 Progress: 0.0%, dl from 0 of 7 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:48 Progress: 0.0%, dl from 0 of 7 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:48 Progress: 0.0%, dl from 0 of 7 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:48 Progress: 0.0%, dl from 0 of 7 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:48 Progress: 0.0%, dl from 0 of 7 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:48 Progress: 0.0%, dl from 0 of 8 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:00:48 Progress: 0.0%, dl from 0 of 9 peers (0 kB/s), ul to 0 (0 kB/s) [None]          
+2024-12-07 11:01:34 [2024-12-07 11:01:34.784] Transmission 3.00 (bb6b5a062e) started
+2024-12-07 11:01:34 [2024-12-07 11:01:34.785] RPC Server: Adding address to whitelist: 127.0.0.1
+2024-12-07 11:01:34 [2024-12-07 11:01:34.785] RPC Server: Adding address to whitelist: ::1
+2024-12-07 11:01:34 [2024-12-07 11:01:34.785] RPC Server: Serving RPC and Web requests on 0.0.0.0:9091/transmission/
+2024-12-07 11:01:34 [2024-12-07 11:01:34.785] RPC Server: Whitelist enabled
+2024-12-07 11:01:34 [2024-12-07 11:01:34.785] RPC Server: Password required
+2024-12-07 11:01:34 [2024-12-07 11:01:34.785] UDP: Failed to set receive buffer: requested 4194304, got 425984
+2024-12-07 11:01:34 [2024-12-07 11:01:34.785] UDP: Please add the line "net.core.rmem_max = 4194304" to /etc/sysctl.conf
+2024-12-07 11:01:34 [2024-12-07 11:01:34.785] UDP: Failed to set send buffer: requested 1048576, got 425984
+2024-12-07 11:01:34 [2024-12-07 11:01:34.785] UDP: Please add the line "net.core.wmem_max = 1048576" to /etc/sysctl.conf
+2024-12-07 11:01:34 [2024-12-07 11:01:34.785] DHT: Reusing old id
+2024-12-07 11:01:34 [2024-12-07 11:01:34.785] DHT: Bootstrapping from 40 IPv4 nodes
+2024-12-07 11:01:34 [2024-12-07 11:01:34.835] Saved "/home/surprise/.config/transmission/torrents/41e6cd50ccec55cd5704c5e3d176e7b59317a3fb.torrent"
+2024-12-07 11:01:35 [2024-12-07 11:01:35.115] Port Forwarding (NAT-PMP): initnatpmp succeeded (0)
+2024-12-07 11:01:35 [2024-12-07 11:01:35.115] Port Forwarding (NAT-PMP): sendpublicaddressrequest succeeded (2)
