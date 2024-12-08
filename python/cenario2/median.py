@@ -1,11 +1,10 @@
 import pandas as pd
 import json 
 import os
-
 # Nomes dos ficheiros
-file_names = ['output/scene2/log_data_aggregated2_1.csv', 
-              'output/scene2/log_data_aggregated2_2.csv', 
-              'output/scene2/log_data_aggregated2_3.csv']
+file_names = ['output/scene2/log_data_aggregated1_1.csv', 
+              'output/scene2/log_data_aggregated1_2.csv', 
+              'output/scene2/log_data_aggregated1_3.csv']
 
 # Inicialização das variáveis para cálculo das médias
 total_tempo = 0
@@ -19,7 +18,16 @@ for file_name in file_names:
     if os.path.exists(file_name):
         # Ler o ficheiro CSV
         df = pd.read_csv(file_name)
-        
+
+        # Converter colunas para numérico (se necessário)
+        df['Tempo'] = pd.to_numeric(df['Tempo'], errors='coerce')
+        df['Peers Conectados'] = pd.to_numeric(df['Peers Conectados'], errors='coerce')
+        df['Download'] = pd.to_numeric(df['Download'], errors='coerce')
+        df['Upload'] = pd.to_numeric(df['Upload'], errors='coerce')
+
+        # Remover linhas com valores inválidos (NaN)
+        df = df.dropna(subset=['Tempo', 'Peers Conectados', 'Download', 'Upload'])
+
         # Somar as colunas relevantes
         total_tempo += df['Tempo'].iloc[-1]  # Último valor do tempo indica o tempo total
         total_pares_conectados += df['Peers Conectados'].mean()  # Média dos pares conectados
@@ -49,9 +57,9 @@ else:
 ######################################
 
 # Lista com os nomes dos ficheiros JSON
-files = ["logs/cenario2/stats2_1.json", 
-         "logs/cenario2/stats2_2.json", 
-         "logs/cenario2/stats2_3.json"]
+files = ["logs/cenario2/stats1_1.json", 
+         "logs/cenario2/stats1_4.json", 
+         "logs/cenario2/stats1_5.json"]
 
 # Inicializar somatórios
 sum_downloaded = 0

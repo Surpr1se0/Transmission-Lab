@@ -3,8 +3,8 @@ import csv
 from collections import defaultdict
 
 # Caminho para o CSV
-input_file = "./output/scene2/log_data_2_3.csv"
-output_file = "./output/scene2/log_data_aggregated2_3.csv"
+input_file = "./output/scene2/log_data_1_3.csv"
+output_file = "./output/scene2/log_data_aggregated1_3.csv"
 
 # Lê os dados do CSV
 data = pd.read_csv(input_file)
