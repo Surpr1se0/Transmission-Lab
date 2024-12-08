@@ -12,7 +12,7 @@ mkdir -p "$LOG_DIR"
 TORRENT_FILE="$TORRENT_DIR/ubuntu.torrent"
 
 # Nome do ficheiro de log RAW com timestamps
-LOG_FILE_RAW="$LOG_DIR/cenario3_1raw.log"
+LOG_FILE_RAW="$LOG_DIR/cenario3_3raw.log"
 
 # Configura condições de rede
 echo "[DEBUG] Configurando condições de rede: Largura de banda ilimitada, latência 150ms e perda de pacotes 25%"

@@ -12,7 +12,7 @@ mkdir -p "$LOG_DIR"
 TORRENT_FILE="$TORRENT_DIR/ubuntu.torrent"
 
 # Nome do ficheiro de log RAW com timestamps
-LOG_FILE_RAW="$LOG_DIR/cenario1_3raw.log"
+LOG_FILE_RAW="$LOG_DIR/cenario3_1raw.log"
 
 # Verifica se o ficheiro .torrent existe
 if [ ! -f "$TORRENT_FILE" ]; then
