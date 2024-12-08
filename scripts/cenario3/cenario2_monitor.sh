@@ -12,7 +12,7 @@ mkdir -p "$LOG_DIR"
 TORRENT_FILE="$TORRENT_DIR/kali.torrent"
 
 # Nome do ficheiro de log RAW com timestamps
-LOG_FILE_RAW="$LOG_DIR/cenario2_4raw.log"
+LOG_FILE_RAW="$LOG_DIR/cenario2_2raw.log"
 
 echo "[DEBUG] Configurando condições de rede: Largura de banda limitada a 2.5 Mbps, latência 150ms e perda de pacotes 20%"
 sudo tc qdisc add dev ens33 root handle 1: htb default 12
