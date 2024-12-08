@@ -141,7 +141,7 @@ plt.plot(data_3["Tempo"], data_3["Download"], color="green", linewidth=2, label=
 
 # Configurações do gráfico
 plt.xlabel("Tempo (s)")
-plt.ylabel("Velocidade do Download (Mbps)")
+plt.ylabel("Velocidade do Download (MB/s)")
 plt.title("Evolução da Velocidade de Download ao Longo do Tempo (Ordenado por Tempo) das 3 simulações")
 plt.legend()
 plt.grid(True)  
