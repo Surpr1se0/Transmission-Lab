@@ -12,13 +12,13 @@ mkdir -p "$LOG_DIR"
 TORRENT_FILE="$TORRENT_DIR/ubuntu.torrent"
 
 # Nome do ficheiro de log RAW com timestamps
-LOG_FILE_RAW="$LOG_DIR/cenario1_1raw.log"
+LOG_FILE_RAW="$LOG_DIR/cenario1_3raw.log"
 
 # Configura condições de rede
-echo "[DEBUG] Configurando condições de rede: Largura de banda limitada a 5 Mbps, latência 50ms e perda de pacotes 10%"
+echo "[DEBUG] Configurando condições de rede: Largura de banda limitada a 2.5 Mbps, latência 150ms e perda de pacotes 20%"
 sudo tc qdisc add dev ens33 root handle 1: htb default 12
-sudo tc qdisc add dev ens33 parent 1:12 handle 10: netem delay 50ms loss 10%
-sudo wondershaper -a ens33 -d 40000 -u 40000
+sudo tc qdisc add dev ens33 parent 1:12 handle 10: netem delay 150ms loss 20%
+sudo wondershaper -a ens33 -d 25000 -u 25000
 
 
 # Verifica se o ficheiro .torrent existe
