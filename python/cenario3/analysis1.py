@@ -47,25 +47,31 @@ plt.show()
 
 
 ##################################################################################
-################ 2. Evolução do Download e da sua velocidade #####################
+################ 2. Evolução do Download e da sua Velocidade #####################
 ##################################################################################
 
-# Ordena os dados pelo tempo
-data = data.sort_values(by="Tempo").reset_index(drop=True)
-
-# Gráfico de Velocidade de Download ao Longo do Tempo
+# Gráfico com dois eixos Y
 plt.figure(figsize=(12, 6))
-plt.plot(data["Tempo"], data["Download"], color="blue", linewidth=2, label="Velocidade")
-plt.plot(data["Tempo"], data["Peers Conectados"], color="orange", linewidth=2, label="Peers Conectados")
 
-# Configurações do gráfico
-plt.xlabel("Tempo (s)")
-plt.ylabel("Velocidade do Download (MB/s)")
-plt.title("Evolução da Velocidade de Download ao Longo do Tempo (Ordenado por Tempo)")
-plt.legend()
-plt.grid(True)  
+# Primeiro eixo Y: Velocidade de Download
+fig, ax1 = plt.subplots()
+ax1.set_xlabel("Tempo (s)")
+ax1.set_ylabel("Velocidade do Download (Mbps)", color="blue")
+ax1.plot(data["Tempo"], data["Download"], label="Velocidade de Download (Mbps)", color="blue", linewidth=2)
+ax1.tick_params(axis="y", labelcolor="blue")
 
-# Salva o gráfico
+# Segundo eixo Y: Número de Peers Conectados
+ax2 = ax1.twinx()
+ax2.set_ylabel("Peers Conectados", color="orange")
+ax2.plot(data["Tempo"], data["Peers Conectados"], label="Peers Conectados", color="orange", linewidth=2, linestyle="--")
+ax2.tick_params(axis="y", labelcolor="orange")
+
+# Título e legendas
+plt.title("Evolução da Velocidade de Download e Peers Conectados ao Longo do Tempo")
+fig.tight_layout()
+plt.grid(True)
+
+# Salva o gráfico no diretório especificado
 output_path = os.path.join(output_dir, graph_name_2)
 plt.savefig(output_path)
 plt.show()
@@ -74,7 +80,6 @@ plt.show()
 ##################################################################################
 #################### 3. Volume total de dados  ###################################
 ##################################################################################
-
 
 # Carregar os dados do JSON
 with open(json_file, "r") as file:
@@ -103,14 +108,13 @@ plt.savefig(output_path)
 plt.show()
 
 
-
 ##################################################################################
 ############# 4. Gráfico da Velocidade do Download ao Longo do Tempo ##############
 ##################################################################################
 
-file_1= "output/scene3/log_data_aggregated1_1.csv"
-file_2= "output/scene3/log_data_aggregated1_2.csv"
-file_3= "output/scene3/log_data_aggregated1_3.csv"
+file_1 = "output/scene3/log_data_aggregated1_1.csv"
+file_2 = "output/scene3/log_data_aggregated1_2.csv"
+file_3 = "output/scene3/log_data_aggregated1_3.csv"
 
 data_1 = pd.read_csv(file_1)
 data_2 = pd.read_csv(file_2)
@@ -144,10 +148,9 @@ plt.xlabel("Tempo (s)")
 plt.ylabel("Velocidade do Download (Mbps)")
 plt.title("Evolução da Velocidade de Download ao Longo do Tempo (Ordenado por Tempo) das 3 simulações")
 plt.legend()
-plt.grid(True)  
+plt.grid(True)
 
 # Salva o gráfico
 output_path = os.path.join(output_dir, graph_name_4)
 plt.savefig(output_path)
 plt.show()
-

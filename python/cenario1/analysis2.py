@@ -4,19 +4,19 @@ import os
 import json
 
 # Caminho para o ficheiro CSV
-csv_file = "output/scene2/log_data_aggregated1_.csv"
-output_dir = "./figures/scene2"
+csv_file = "output/scene1/log_data_aggregated2_1.csv"
+output_dir = "./figures/scene1"
 
 # Caminho para o ficheiro JSON
-json_file = "./logs/cenario2/stats1_4.json"
+json_file = "./logs/cenario1/stats2_1.json"
 
 # Nomes para os gráficos individuais
-graph_name_1 = "grafico_progresso3.png"
-graph_name_2 = "grafico_velocidade_download3.png"
-graph_name_3 = "grafico_bytes3.png"
+graph_name_1 = "grafico_progresso4.png"
+graph_name_2 = "grafico_velocidade_download4.png"
+graph_name_3 = "grafico_bytes4.png"
 
 # Nome para o gráfico agregado
-graph_name_4 = "grafico_aggregated.png"
+graph_name_4 = "grafico_aggregated2.png"
 
 data = pd.read_csv(csv_file)
 
@@ -71,11 +71,10 @@ plt.title("Evolução da Velocidade de Download e Peers Conectados ao Longo do T
 fig.tight_layout()
 plt.grid(True)
 
-# Salva o gráfico
+# Salva o gráfico no diretório especificado
 output_path = os.path.join(output_dir, graph_name_2)
 plt.savefig(output_path)
 plt.show()
-
 
 
 ##################################################################################
@@ -115,9 +114,9 @@ plt.show()
 ############# 4. Gráfico da Velocidade do Download ao Longo do Tempo ##############
 ##################################################################################
 
-file_1= "output/scene2/log_data_aggregated1_1.csv"
-file_2= "output/scene2/log_data_aggregated1_2.csv"
-file_3= "output/scene2/log_data_aggregated1_3.csv"
+file_1= "output/scene1/log_data_aggregated1_1.csv"
+file_2= "output/scene1/log_data_aggregated1_2.csv"
+file_3= "output/scene1/log_data_aggregated1_3.csv"
 
 data_1 = pd.read_csv(file_1)
 data_2 = pd.read_csv(file_2)

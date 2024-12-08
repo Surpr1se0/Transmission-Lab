@@ -50,22 +50,28 @@ plt.show()
 ################ 2. Evolução do Download e da sua velocidade #####################
 ##################################################################################
 
-# Ordena os dados pelo tempo
-data = data.sort_values(by="Tempo").reset_index(drop=True)
-
-# Gráfico de Velocidade de Download ao Longo do Tempo
+# Gráfico com dois eixos Y
 plt.figure(figsize=(12, 6))
-plt.plot(data["Tempo"], data["Download"], color="blue", linewidth=2, label="Velocidade")
-plt.plot(data["Tempo"], data["Peers Conectados"], color="orange", linewidth=2, label="Peers Conectados")
 
-# Configurações do gráfico
-plt.xlabel("Tempo (s)")
-plt.ylabel("Velocidade do Download (Mbps)")
-plt.title("Evolução da Velocidade de Download ao Longo do Tempo (Ordenado por Tempo)")
-plt.legend()
-plt.grid(True)  
+# Primeiro eixo Y: Velocidade de Download
+fig, ax1 = plt.subplots()
+ax1.set_xlabel("Tempo (s)")
+ax1.set_ylabel("Velocidade do Download (Mbps)", color="blue")
+ax1.plot(data["Tempo"], data["Download"], label="Velocidade de Download (Mbps)", color="blue", linewidth=2)
+ax1.tick_params(axis="y", labelcolor="blue")
 
-# Salva o gráfico
+# Segundo eixo Y: Número de Peers Conectados
+ax2 = ax1.twinx()
+ax2.set_ylabel("Peers Conectados", color="orange")
+ax2.plot(data["Tempo"], data["Peers Conectados"], label="Peers Conectados", color="orange", linewidth=2, linestyle="--")
+ax2.tick_params(axis="y", labelcolor="orange")
+
+# Título e legendas
+plt.title("Evolução da Velocidade de Download e Peers Conectados ao Longo do Tempo")
+fig.tight_layout()
+plt.grid(True)
+
+# Salva o gráfico no diretório especificado
 output_path = os.path.join(output_dir, graph_name_2)
 plt.savefig(output_path)
 plt.show()
