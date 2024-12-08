@@ -50,8 +50,8 @@ else:
 
 # Lista com os nomes dos ficheiros JSON
 files = ["logs/cenario3/stats1_1.json", 
-         "logs/cenario3/stats1_2.json",
-         "logs/cenario3/stats1_3.json"]
+         "logs/cenario3/stats1_4.json",
+         "logs/cenario3/stats1_5.json"]
 
 # Inicializar somatórios
 sum_downloaded = 0

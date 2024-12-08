@@ -4,16 +4,16 @@ import os
 import json
 
 # Caminho para o ficheiro CSV
-csv_file = "output/scene3/log_data_aggregated1_1.csv"
+csv_file = "output/scene3/log_data_aggregated1_3.csv"
 output_dir = "./figures/scene3"
-
+    
 # Caminho para o ficheiro JSON
-json_file = "./logs/cenario3/stats1_1.json"
+json_file = "./logs/cenario3/stats1_5.json"
 
 # Nomes para os gráficos individuais
-graph_name_1 = "grafico_progresso1.png"
-graph_name_2 = "grafico_velocidade_download1.png"
-graph_name_3 = "grafico_bytes1.png"
+graph_name_1 = "grafico_progresso3.png"
+graph_name_2 = "grafico_velocidade_download3.png"
+graph_name_3 = "grafico_bytes3.png"
 
 # Nome para o gráfico agregado
 graph_name_4 = "grafico_aggregated.png"
