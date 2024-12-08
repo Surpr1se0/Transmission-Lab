@@ -3,10 +3,10 @@ import csv
 from datetime import datetime
 
 # Caminho para o log
-log_file_path = "./logs/cenario1/cenario2_3raw.log"
+log_file_path = "./logs/cenario1/cenario3_3raw.log"
 
 # Escreve os dados no CSV
-output_file = "./output/scene1/log_data_2_3.csv"
+output_file = "./output/scene1/log_data_3_3.csv"
 
 # Padrão de regex para extrair a informação
 log_pattern = re.compile(

@@ -3,9 +3,9 @@ import json
 import os
 
 # Nomes dos ficheiros
-file_names = ['output/scene1/log_data_aggregated2_1.csv', 
-              'output/scene1/log_data_aggregated2_2.csv', 
-              'output/scene1/log_data_aggregated2_3.csv']
+file_names = ['output/scene1/log_data_aggregated3_1.csv', 
+              'output/scene1/log_data_aggregated3_2.csv', 
+              'output/scene1/log_data_aggregated3_3.csv']
 
 # Inicialização das variáveis para cálculo das médias
 total_tempo = 0
@@ -49,9 +49,9 @@ else:
 ######################################
 
 # Lista com os nomes dos ficheiros JSON
-files = ["logs/cenario1/stats2_1.json", 
-         "logs/cenario1/stats2_2.json", 
-         "logs/cenario1/stats2_3.json"]
+files = ["logs/cenario1/stats3_1.json", 
+         "logs/cenario1/stats3_2.json", 
+         "logs/cenario1/stats3_3.json"]
 
 # Inicializar somatórios
 sum_downloaded = 0

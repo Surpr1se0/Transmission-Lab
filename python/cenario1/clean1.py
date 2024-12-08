@@ -3,8 +3,8 @@ import csv
 from collections import defaultdict
 
 # Caminho para o CSV
-input_file = "./output/scene1/log_data_2_3.csv"
-output_file = "./output/scene1/log_data_aggregated2_3.csv"
+input_file = "./output/scene1/log_data_3_3.csv"
+output_file = "./output/scene1/log_data_aggregated3_3.csv"
 
 # Lê os dados do CSV
 data = pd.read_csv(input_file)
@@ -24,7 +24,7 @@ data["Download"] = data["Download"].apply(convert_to_mbs)
 aggregated_data = (
     data.groupby("Tempo", as_index=False)
     .agg({
-        "Progresso": lambda x: x.iloc[0],  # Mantém o primeiro valor para `Progresso`
+        "Progresso": lambda x: x.iloc[0],  # Mantém o primeiro valor para `Progresso` 
         "Peers Conectados": lambda x: x.iloc[0],  # Mantém o primeiro valor para `Peers Conectados`
         "Peers Totais": "mean",  # Calcula a média de `Peers Totais`
         "Download": "max",  # Usa o valor máximo de `Download` (em MB/s)
